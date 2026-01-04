@@ -276,12 +276,36 @@ footer {
 .navbar ul li a.active {
     color: #38bdf8;
 }
-.navbar ul li a.active::after {
-    width: 100%;
-}
+
 .navbar ul li a::after {
     width: 0;
 }
+/* RESET default focus behavior */
+.navbar ul li a {
+    outline: none;
+}
+
+/* Remove browser focus color */
+.navbar ul li a:focus,
+.navbar ul li a:focus-visible {
+    color: white;
+}
+
+/* Hover effect (temporary) */
+.navbar ul li a:hover {
+    color: #38bdf8;
+}
+
+/* ACTIVE state (the ONLY permanent highlight) */
+.navbar ul li a.active {
+    color: #38bdf8;
+}
+
+/* Active underline only */
+.navbar ul li a.active::after {
+    width: 100%;
+}
+
 
 
 
