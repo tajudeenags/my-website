@@ -1,27 +1,37 @@
-const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar ul li a");
+const sections = document.querySelectorAll("section[id]:not(#home)");
 
-const observerOptions = {
-    root: null,
-    rootMargin: "-40% 0px -40% 0px",
-    threshold: 0
-};
+function clearActive() {
+    navLinks.forEach(link => link.classList.remove("active"));
+}
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${entry.target.id}`) {
-                    link.classList.add("active");
-                }
-            });
+// Handle scroll
+window.addEventListener("scroll", () => {
+    clearActive();
+
+    // If at very top → Home active
+    if (window.scrollY < 100) {
+        document.querySelector('.navbar a[href="#home"]').classList.add("active");
+        return;
+    }
+
+    sections.forEach(section => {
+        const top = section.offsetTop - 150;
+        const height = section.offsetHeight;
+
+        if (scrollY >= top && scrollY < top + height) {
+            document
+                .querySelector(`.navbar a[href="#${section.id}"]`)
+                .classList.add("active");
         }
     });
-}, observerOptions);
+});
 
-sections.forEach(section => observer.observe(section));
-
-document.querySelectorAll(".navbar ul li a").forEach(link => {
-    link.addEventListener("click", () => link.blur());
+// Click behavior
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        clearActive();
+        link.classList.add("active");
+        link.blur();
+    });
 });
