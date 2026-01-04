@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     animation: fadeIn 1s ease-in;
 }
@@ -269,5 +273,6 @@ footer {
 .projects {
     border-top: 2px solid #e5e7eb;
 }
+
 
 
