@@ -168,3 +168,42 @@ footer {
     }
 }
 
+/* Contact Section */
+.contact {
+    background: #0f172a;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin-bottom: 40px;
+    color: #cbd5f5;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.contact textarea {
+    resize: none;
+    height: 120px;
+}
+
