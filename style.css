@@ -65,8 +65,8 @@ body {
     transition: width 0.3s ease;
 }
 
-.navbar ul li a:hover::after {
-    width: 100%;
+.navbar ul li a:hover {
+    color: #38bdf8;
 }
 
 /* Hero */
@@ -275,6 +275,12 @@ footer {
 }
 .navbar ul li a.active {
     color: #38bdf8;
+}
+.navbar ul li a.active::after {
+    width: 100%;
+}
+.navbar ul li a::after {
+    width: 0;
 }
 
 
