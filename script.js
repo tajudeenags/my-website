@@ -1,14 +1,14 @@
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar ul li a");
 
 window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+        const sectionTop = section.offsetTop - 200;
+        const sectionHeight = section.offsetHeight;
 
-        if (scrollY >= sectionTop - 150) {
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute("id");
         }
     });
