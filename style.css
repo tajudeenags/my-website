@@ -273,6 +273,10 @@ footer {
 .projects {
     border-top: 2px solid #e5e7eb;
 }
+.navbar ul li a.active {
+    color: #38bdf8;
+}
+
 
 
 
