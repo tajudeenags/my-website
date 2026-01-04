@@ -5,10 +5,13 @@ window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 200;
+        const sectionTop = section.offsetTop - 120; // navbar offset
         const sectionHeight = section.offsetHeight;
 
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
             current = section.getAttribute("id");
         }
     });
