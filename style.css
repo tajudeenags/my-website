@@ -306,6 +306,7 @@ footer {
 
 .project-card {
     position: relative;
+    height: 220px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
@@ -355,6 +356,7 @@ footer {
 .project-card:hover .project-overlay {
     opacity: 1;
 }
+
 
 
 
