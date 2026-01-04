@@ -21,3 +21,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
+
+document.querySelectorAll(".navbar ul li a").forEach(link => {
+    link.addEventListener("click", () => link.blur());
+});
