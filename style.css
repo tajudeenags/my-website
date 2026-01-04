@@ -48,6 +48,7 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    position: relative;
 }
 .navbar ul li a {
     position: relative;
@@ -65,9 +66,7 @@ body {
     transition: width 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color: #38bdf8;
-}
+
 
 /* Hero */
 .hero {
@@ -277,19 +276,12 @@ footer {
     color: #38bdf8;
 }
 
-.navbar ul li a::after {
-    width: 0;
-}
+::after {
 /* RESET default focus behavior */
 .navbar ul li a {
     outline: none;
 }
 
-/* Remove browser focus color */
-.navbar ul li a:focus,
-.navbar ul li a:focus-visible {
-    color: white;
-}
 
 /* Hover effect (temporary) */
 .navbar ul li a:hover {
@@ -305,6 +297,7 @@ footer {
 .navbar ul li a.active::after {
     width: 100%;
 }
+
 
 
 
