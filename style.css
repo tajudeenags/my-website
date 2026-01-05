@@ -29,6 +29,11 @@ body {
     align-items: center;
     padding: 20px 40px;
     background: #0f172a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -356,6 +361,7 @@ footer {
 .project-card:hover .project-overlay {
     opacity: 1;
 }
+
 
 
 
