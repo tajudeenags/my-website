@@ -4,6 +4,7 @@ html {
 
 body {
     animation: fadeIn 1s ease-in;
+    padding-top: 70px; /* match navbar height */
 }
 
 @keyframes fadeIn {
@@ -361,6 +362,7 @@ footer {
 .project-card:hover .project-overlay {
     opacity: 1;
 }
+
 
 
 
